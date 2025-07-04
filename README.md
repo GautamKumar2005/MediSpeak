@@ -28,6 +28,9 @@ MediSpeak is an advanced AI-powered web platform built to **empower patients by 
   - All uploads are encrypted and processed securely.
   - No personal data stored without explicit consent.
   - Complies with local and global health data regulations.
+- **🤖 Telegram Bot Integration**
+  - Access MediSpeak via Telegram for instant, on-the-go health report simplification.
+  - Uses Telegram Bot API for secure, interactive messaging and report processing.
 
 ---
 
@@ -52,6 +55,7 @@ MediSpeak is an advanced AI-powered web platform built to **empower patients by 
 | OCR & Image Parsing | PaddleOCR, OpenCV                          |
 | Visualization       | Chart.js, D3.js                            |
 | Language Support    | Google Translate API, IndicTrans           |
+| Messaging Bot       | Telegram Bot API                           |
 | Authentication      | Google OAuth Client ID                     |
 | Security            | HTTPS, AES encryption, JWT                 |
 | Deployment          | Vercel / Streamlit / Docker                |
@@ -103,8 +107,8 @@ MediSpeak is an advanced AI-powered web platform built to **empower patients by 
 ### 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/yourusername/medispeak.git
-cd medispeak
+git clone https://github.com/GautamKumar2005/MediSpeak.git
+cd MediSpeak
 ```
 
 ---
@@ -127,7 +131,7 @@ conda activate medispeak
 cd backend
 pip install -r requirements.txt
 # Example requirements.txt includes:
-# fastapi, uvicorn, paddleocr, opencv-python, google-cloud-translate, transformers, requests, python-dotenv
+# fastapi, uvicorn, paddleocr, opencv-python, google-cloud-translate, transformers, requests, python-dotenv, python-telegram-bot
 ```
 
 ---
@@ -161,6 +165,7 @@ GOOGLE_CLIENT_ID=your_google_oauth_client_id
 GOOGLE_TRANSLATE_API_KEY=your_google_translate_api_key
 HUGGINGFACE_API_TOKEN=your_huggingface_api_token
 GEMINI_API_KEY=your_gemini_25_flash_api_key
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token
 SECRET_KEY=your_secret_key_for_jwt
 ```
 
@@ -170,6 +175,7 @@ SECRET_KEY=your_secret_key_for_jwt
     - **Google Translate API Key:** [Google Cloud Translation API](https://console.cloud.google.com/apis/library/translate.googleapis.com)
     - **HuggingFace API Token:** [HuggingFace Account](https://huggingface.co/settings/tokens)
     - **Gemini 2.5 Flash API Key:** [Google Gemini](https://aistudio.google.com/app/apikey)
+    - **Telegram Bot Token:** [BotFather on Telegram](https://core.telegram.org/bots#6-botfather)
 
 ---
 
@@ -195,6 +201,12 @@ npm start
 # Open http://localhost:3000
 ```
 
+#### **Telegram Bot**
+```bash
+# In telegram-bot directory (if separate)
+python index.py
+```
+
 ---
 
 ### 7. **Optional: Run with Docker**
@@ -210,7 +222,8 @@ docker-compose up --build
 
 - **Google Translate API**: Used for multilingual support.
 - **HuggingFace API**: Used for advanced NLP (summarization, explanation).
-- **Gemini 2.5 Flash**: Used for high-performance AI Q&A (replace default OpenAI endpoint in Python code).
+- **Gemini 2.5 Flash**: Used for high-performance AI Q&A.
+- **Telegram Bot API**: Enables chatbot interactions on Telegram.
 - All API keys/tokens managed securely in `.env` and **never committed to source control**.
 
 ---
@@ -223,6 +236,7 @@ GOOGLE_CLIENT_ID=xxxxxxxxx-xxxxx.apps.googleusercontent.com
 GOOGLE_TRANSLATE_API_KEY=AIzaSyDxxxxxxx
 HUGGINGFACE_API_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 GEMINI_API_KEY=AIzaSyB-xxxxxxxxxxxxxxxxxxxxxxxxxxx
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token
 SECRET_KEY=supersecretjwtkey
 ```
 
@@ -234,7 +248,8 @@ SECRET_KEY=supersecretjwtkey
 2. Start Python backend (`uvicorn app:app --reload`)
 3. Start Node.js backend (if needed) (`npm start`)
 4. Start frontend (`npm start`)
-5. Open [http://localhost:3000](http://localhost:3000) and use MediSpeak!
+5. Start Telegram bot (`python index.py`)
+6. Open [http://localhost:3000](http://localhost:3000) and use MediSpeak!
 
 ---
 
@@ -243,6 +258,7 @@ SECRET_KEY=supersecretjwtkey
 - Ensure Anaconda environment is activated when running Python backend.
 - Double-check `.env` variables are present and correct.
 - For any API errors, verify your API keys and billing status on provider dashboards.
+- Make sure Telegram bot token is valid and not shared publicly.
 
 ---
 
@@ -274,11 +290,9 @@ SECRET_KEY=supersecretjwtkey
 
 ## 📬 Contact & Demo
 
-- **Web App:** [Demo Link](http://localhost:3000) *(replace with your deployed URL)*
-- **GitHub:** [github.com/yourusername/medispeak](https://github.com/yourusername/medispeak)
+- **GitHub:** [github.com/GautamKumar2005/MediSpeak](https://github.com/GautamKumar2005/MediSpeak)
 - **Telegram Bot:** [@MediSpeakBot](https://t.me/MediSpeakBot) *(replace with your bot link)*
-- **Email:** [your@email.com](mailto:your@email.com)
-
+  
 ---
 
 > **MediSpeak: Making Medical Knowledge Truly Universal.**
