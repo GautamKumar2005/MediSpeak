@@ -287,7 +287,18 @@ SECRET_KEY=supersecretjwtkey
 - **Feedback & Support**: Use GitHub Issues for bugs or enhancement requests.
 
 ---
+### 🧪 Results
 
+- **Result 1:**  
+  ![Result 1](https://raw.githubusercontent.com/GautamKumar2005/MediSpeak/refs/heads/masters/Images/result1.png)
+
+- **Result 2:**  
+  ![Result 2](https://raw.githubusercontent.com/GautamKumar2005/MediSpeak/refs/heads/masters/Images/result2.png)
+
+- **Result 3:**  
+  ![Result 3](https://raw.githubusercontent.com/GautamKumar2005/MediSpeak/refs/heads/masters/Images/result3.png)
+
+---
 ## 📬 Contact & Demo
 
 - **GitHub:** [github.com/GautamKumar2005/MediSpeak](https://github.com/GautamKumar2005/MediSpeak)
